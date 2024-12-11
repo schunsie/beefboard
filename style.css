@@ -40,7 +40,7 @@ input, button, textarea, select {
     grid-template-rows: repeat(3, min-content);
     gap: 10%;
     align-items: start;
-    padding: 10% 20%;
+    padding: 10% 10%;
 
     background: var(--color-primary);
     color: var(--color-detail-primary);
@@ -77,14 +77,19 @@ ul[class^='menu'] {
     font-size: 1.2rem;
     font-weight: 600;
 
-    li {
+    a, a:hover, a:visited {
+        text-decoration: none;
+        color: inherit;
         display: flex;
         align-items: center;
         gap: 5%;
+    }
 
-        +li {
-            margin-top: 1rem;
-        }
+    li + li {
+        margin-top: 5%;
+    }
+
+
     }
 
     img {
