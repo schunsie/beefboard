@@ -89,9 +89,6 @@ ul[class^='menu'] {
         margin-top: 5%;
     }
 
-
-    }
-
     img {
         filter: var(--filter-icon);
         width: 3rem;
