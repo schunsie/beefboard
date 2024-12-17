@@ -69,6 +69,7 @@ input, button, textarea, select {
     .logo {
         filter: var(--filter-icon);
         width: 4rem;
+        min-width: 4rem;
         height: auto;
     }
 }
@@ -139,18 +140,13 @@ ul[class^='menu'] {
         grid-template-columns: repeat(3, auto);
     }
 
-    img[class^='avatar'] {
-        border-radius: 50%;
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-        width: 4rem;
-        min-width: 4rem;
-    }
-
+    
     img.avatar-large {
         width: 6rem;
         min-width: 6rem;
+        max-height: 6rem;
     }
-
+    
     .buttons button {
         width: 6rem;
         height: 3rem;
@@ -165,6 +161,14 @@ ul[class^='menu'] {
     p {
         font-weight: bold;
     }
+}
+
+img[class^='avatar'] {
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    width: 4rem;
+    min-width: 4rem;
+    max-height: 4rem;
 }
 
 .searchform {
@@ -183,5 +187,90 @@ ul[class^='menu'] {
         border: none;
         background-color: #e6e8e9;
         padding: 0.5rem 1rem;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto 1fr;
+    padding: 3rem 2rem;
+    gap: 2rem;
+
+    .workout-wrapper {
+        grid-area: 2 / 1 / 5 / 2;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        grid-template-rows: repeat(3, minmax(15rem, 1fr));
+    }
+    
+    .card {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-left: #1973da 1rem solid;
+        border-radius: 0.5rem;
+        justify-content: start;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    div[class*='container'] {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .friend-container {
+        display: grid;
+    }
+
+    .friend {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: auto 1fr;
+        align-self: center;
+    }
+
+    .friend-name {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    .friend-name > span {
+        align-self: start;
+        color: #858585;
+    }
+
+    .friend-name > p {
+        align-self: end;
+        font-weight: 500;
+    }
+
+    .friend img {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    div.pr-container {
+        padding: 2rem;
+    }
+    
+    .pr {
+        height: calc(100%/3);
+    }
+    
+    .pr + .pr {      
+        border-top: 1px solid rgba(128, 128, 128, 0.507);
+        padding-top: 1rem;
+    }
+
+    .pr > p {
+        padding: 1rem 0 0 1rem;
+    }
+    
+    .weight {
+        font-size: 2rem;
+        text-decoration: unerl;
+        color: #172554;
     }
 }
