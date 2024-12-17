@@ -213,8 +213,28 @@ img[class^='avatar'] {
         border-radius: 0.5rem;
         justify-content: start;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-rows: auto auto 1fr;
     }
     
+    .card-options {
+        text-align: right;
+        align-self: end;
+    }
+    .card-options li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .card-options img {
+        width: 1.5rem;
+        filter: invert(11%) sepia(22%) saturate(3823%) hue-rotate(201deg) brightness(89%) contrast(103%);
+    }
+
+    .card-options li + li {
+        margin-left: 1rem;
+    }
+
     div[class*='container'] {
         background-color: #ffffff;
         padding: 1rem;
